@@ -55,5 +55,23 @@ public class Car {
         this.series = series;
     }
 
+    public User getUser() {
+        return user;
+    }
 
+    public User setUser(User user) {
+        this.user = user;
+        return user;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", model='" + model + '\'' +
+                ", series=" + series +
+                ", user=" + user +
+                '}';
+    }
 }
+
