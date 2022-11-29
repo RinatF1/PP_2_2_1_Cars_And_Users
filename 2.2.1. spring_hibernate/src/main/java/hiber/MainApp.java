@@ -18,36 +18,6 @@ public class MainApp {
 
       UserService userService = context.getBean(UserService.class);
 
-//      userService.add(new User("User1", "Lastname1", "user1@mail.ru"));
-//      userService.add(new User("User2", "Lastname2", "user2@mail.ru"));
-//      userService.add(new User("User3", "Lastname3", "user3@mail.ru"));
-//      userService.add(new User("User4", "Lastname4", "user4@mail.ru"));
-//
-//      List<User> users = userService.listUsers();
-//      for (User user : users) {
-//         System.out.println("Id = "+user.getId());
-//         System.out.println("First Name = "+user.getFirstName());
-//         System.out.println("Last Name = "+user.getLastName());
-//         System.out.println("Email = "+user.getEmail());
-//         System.out.println();
-//      }
-//
-//      CarService carService = context.getBean(CarService.class);
-//
-//      carService.add(new Car("Mercedes", 600));
-//      carService.add(new Car("BMW", 750));
-//      carService.add(new Car("VAZ", 2109));
-//      carService.add(new Car("Mosckvitch", 412));
-//
-//      List<Car> cars = carService.carList();
-//      for (Car car : cars) {
-//         System.out.println("Id =" + car.getId());
-//         System.out.println("model =" + car.getModel());
-//         System.out.println("series =" + car.getSeries());
-//         System.out.println();
-//
-//
-//      }
       User user1 = new User("Vasya", "Pupkin","VasyaPupkin@ya.ru");
       User user2 = new User("Dima", "Zalupkin", "DimaZalupkin@gmail.com");
       User user3 = new User("Sasha", "Krendel", "SashaKrendel@mail.ru");
@@ -76,7 +46,7 @@ public class MainApp {
 
 
       try {
-         User notFoundUser = userService.getUserByCar("Broom", 90);
+         User notFoundUser = userService.getUserByCar("Tesla", 3);
       } catch (NoResultException e) {
          System.out.println("User not found");
          System.out.println("3. _____________________________________________");

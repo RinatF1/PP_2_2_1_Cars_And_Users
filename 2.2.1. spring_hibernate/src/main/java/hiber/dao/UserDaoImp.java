@@ -16,7 +16,7 @@ public class UserDaoImp implements UserDao {
    private SessionFactory sessionFactory;
 
    @Override
-   public void add(User user) {
+   public void addUser(User user) {
       sessionFactory.getCurrentSession().save(user);
    }
 
@@ -28,10 +28,10 @@ public class UserDaoImp implements UserDao {
    }
 
    public User getUserByCar(String model, int series) {
-      String hql = "from User user where user.car.model = :model and user.car.series = :series";
-      TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery(hql);
-      query.setParameter("model", model).setParameter("series", series);
-      return query.setMaxResults(1).getSingleResult();
+         TypedQuery<User> query = sessionFactory.getCurrentSession()
+              .createQuery("from User user where user.car.model = :model and user.car.series = :series");
+         query.setParameter("model", model).setParameter("series", series);
+         return query.setMaxResults(1).getSingleResult();
    }
 
 

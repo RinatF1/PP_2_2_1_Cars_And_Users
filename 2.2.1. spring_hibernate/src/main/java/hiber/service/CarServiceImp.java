@@ -16,7 +16,7 @@ public class CarServiceImp implements CarService{
     @Transactional
     @Override
     public void add(Car userCar) {
-        carDao.add(userCar);
+        carDao.addCar(userCar);
 
     }
     @Transactional
