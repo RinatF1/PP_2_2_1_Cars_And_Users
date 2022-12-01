@@ -7,6 +7,6 @@ import java.util.List;
 public interface CarDao {
 
     void addCar (Car userCar);
-    List<Car> carList();
+    List<Car> carListForTable();
 
 }

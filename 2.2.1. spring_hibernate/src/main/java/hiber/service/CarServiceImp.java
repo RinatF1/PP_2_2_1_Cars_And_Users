@@ -15,13 +15,13 @@ public class CarServiceImp implements CarService{
 
     @Transactional
     @Override
-    public void add(Car userCar) {
+    public void addCar(Car userCar) {
         carDao.addCar(userCar);
 
     }
     @Transactional
     @Override
-    public List<Car> carList() {
-        return carDao.carList();
+    public List<Car> carListForTable() {
+        return carDao.carListForTable();
     }
 }

@@ -6,8 +6,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface UserService {
-    void add(User user);
-    List<User> listUsers();
+    void addUser(User user);
+    List<User> listUsersOfTable();
 
     @Transactional(readOnly = true)
     User getUserByCar(String model, int series);

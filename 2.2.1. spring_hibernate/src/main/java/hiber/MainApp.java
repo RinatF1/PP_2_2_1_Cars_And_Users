@@ -30,12 +30,12 @@ public class MainApp {
 
 
 
-      userService.add(user1.setCar(car1).setUser(user1));
-      userService.add(user2.setCar(car2).setUser(user2));
-      userService.add(user3.setCar(car3).setUser(user3));
-      userService.add(user4.setCar(car4).setUser(user4));
+      userService.addUser(user1.setCar(car1).setUser(user1));
+      userService.addUser(user2.setCar(car2).setUser(user2));
+      userService.addUser(user3.setCar(car3).setUser(user3));
+      userService.addUser(user4.setCar(car4).setUser(user4));
 
-      for (User user : userService.listUsers()) {
+      for (User user : userService.listUsersOfTable()) {
          System.out.println(user + " " + user.getCar());
          System.out.println("1. _____________________________________________");
       }
